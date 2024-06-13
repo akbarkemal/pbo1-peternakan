@@ -9,12 +9,11 @@ package peternak;
  * @author acer
  */
 public class peternak {
-   int idPeternak;
-   String namaPeternak, alamat, email, password;
+   String idPeternak,namaPeternak, alamat, email, password;
    
    public peternak(){}
    
-   public peternak(int idPeternak, String namaPeternak, String alamat, String email, String password) {
+   public peternak(String idPeternak, String namaPeternak, String alamat, String email, String password) {
         this.idPeternak = idPeternak;
         this.namaPeternak = namaPeternak;
         this.alamat = alamat;
@@ -22,11 +21,11 @@ public class peternak {
         this.password = password;
     }
    
-   public void inputIdPeternak(int idPeternak) {
+   public void inputIdPeternak(String idPeternak) {
         this.idPeternak = idPeternak;
     }
 
-    public int ambilIdPeternak() {
+    public String ambilIdPeternak() {
         return this.idPeternak;
     }
 

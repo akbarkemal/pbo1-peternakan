@@ -31,12 +31,12 @@ public class koneksi {
     }
     
     //untuk tabel peternak
-    public void simpanpeternak(int idPeternak, String nmPeternak , String Alamat, String Email, String Password){
+    public void simpanpeternak(String idPeternak, String nmPeternak , String Alamat, String Email, String Password){
         
         try {
             String sql = "insert into peternak(id_peternak, nm_peternak, alamat, email, password) value (?,?,?,?,?)";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idPeternak);
+            perintah.setString(1, idPeternak);
             perintah.setString(2, nmPeternak);
             perintah.setString(3, Alamat);
             perintah.setString(4, Email);
@@ -49,7 +49,7 @@ public class koneksi {
         }
     }
     //untuk tabel peternak
-    public void ubahpeternak(int idPeternak, String nmPeternak , String Alamat, String Email, String Password){
+    public void ubahpeternak(String idPeternak, String nmPeternak , String Alamat, String Email, String Password){
         
         try {
             String sql = "update peternak set nm_peternak = ?, alamat = ?, email = ?, password = ? where id_peternak = ?";
@@ -58,7 +58,7 @@ public class koneksi {
             perintah.setString(2, Alamat);
             perintah.setString(3, Email);
             perintah.setString(4, Password);
-            perintah.setInt(5, idPeternak);
+            perintah.setString(5, idPeternak);
             perintah.executeUpdate();
             System.out.println("Data berhasil diubah");
             
@@ -67,12 +67,12 @@ public class koneksi {
         }
     }
     //untuk tabel peternak
-    public void hapuspeternak(int idPeternak){
+    public void hapuspeternak(String idPeternak){
         
         try {
             String sql = "delete from peternak where id_peternak = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idPeternak);
+            perintah.setString(1, idPeternak);
             perintah.executeUpdate();
             System.out.println("Data berhasil dihapus");
             
@@ -81,13 +81,13 @@ public class koneksi {
         }
     }
     //untuk tabel tanya
-    public void simpantanya(int idTanya, int idPenanya , String Pertanyaan, String Kategori, String Waktu, String Status){
+    public void simpantanya(String idTanya, String idPenanya , String Pertanyaan, String Kategori, String Waktu, String Status){
         
         try {
             String sql = "insert into tanya(id_tanya, id_penanya, pertanyaan, kategori, waktu, status) value (?,?,?,?,?,?)";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idTanya);
-            perintah.setInt(2, idPenanya);
+            perintah.setString(1, idTanya);
+            perintah.setString(2, idPenanya);
             perintah.setString(3, Pertanyaan);
             perintah.setString(4, Kategori);
             perintah.setString(5, Waktu);
@@ -100,17 +100,17 @@ public class koneksi {
         }
     }
     //untuk tabel tanya
-    public void ubahtanya(int idTanya, int idPenanya , String Pertanyaan, String Kategori, String Waktu, String Status){
+    public void ubahtanya(String idTanya, String idPenanya , String Pertanyaan, String Kategori, String Waktu, String Status){
         
         try {
             String sql = "update tanya set id_penanya = ?, pertanyaan = ?, kategori = ?, waktu = ?, status = ? where id_tanya = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idPenanya);
+            perintah.setString(1, idPenanya);
             perintah.setString(2, Pertanyaan);
             perintah.setString(3, Kategori);
             perintah.setString(4, Waktu);
             perintah.setString(5, Status);
-            perintah.setInt(6, idTanya);
+            perintah.setString(6, idTanya);
             perintah.executeUpdate();
             System.out.println("Data berhasil diubah");
             
@@ -119,12 +119,12 @@ public class koneksi {
         }
     }
     //untuk tabel tanya
-    public void hapustanya(int idTanya){
+    public void hapustanya(String idTanya){
         
         try {
             String sql = "delete from tanya where id_tanya = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idTanya);
+            perintah.setString(1, idTanya);
             perintah.executeUpdate();
             System.out.println("Data berhasil dihapus");
             
@@ -133,12 +133,12 @@ public class koneksi {
         }
     }
     //untuk tabel penyuluh
-    public void simpanpenyuluh(int idPenyuluh, String nmPenyuluh , String Alamat, String Email, String Password){
+    public void simpanpenyuluh(String idPenyuluh, String nmPenyuluh , String Alamat, String Email, String Password){
         
         try {
             String sql = "insert into penyuluh(id_penyuluh, nm_penyuluh, alamat, email, password) value (?,?,?,?,?)";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idPenyuluh);
+            perintah.setString(1, idPenyuluh);
             perintah.setString(2, nmPenyuluh);
             perintah.setString(3, Alamat);
             perintah.setString(4, Email);
@@ -151,7 +151,7 @@ public class koneksi {
         }
     }
     //untuk tabel penyuluh
-    public void ubahpenyuluh(int idPenyuluh, String nmPenyuluh , String Alamat, String Email, String Password){
+    public void ubahpenyuluh(String idPenyuluh, String nmPenyuluh , String Alamat, String Email, String Password){
         
         try {
             String sql = "update penyuluh set nm_penyuluh = ?, alamat = ?, email = ?, password = ? where id_penyuluh = ?";
@@ -160,7 +160,7 @@ public class koneksi {
             perintah.setString(2, Alamat);
             perintah.setString(3, Email);
             perintah.setString(4, Password);
-            perintah.setInt(5, idPenyuluh);
+            perintah.setString(5, idPenyuluh);
             perintah.executeUpdate();
             System.out.println("Data berhasil diubah");
             
@@ -169,12 +169,12 @@ public class koneksi {
         }
     }
     //untuk tabel penyuluh
-    public void hapuspenyuluh(int idPenyuluh){
+    public void hapuspenyuluh(String idPenyuluh){
         
         try {
             String sql = "delete from penyuluh where id_penyuluh = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idPenyuluh);
+            perintah.setString(1, idPenyuluh);
             perintah.executeUpdate();
             System.out.println("Data berhasil dihapus");
             
@@ -183,14 +183,14 @@ public class koneksi {
         }
     }
     //untuk tabel jawab
-    public void simpanjawab(int idJawab, int idTanya, int idPenjawab , String Jawaban, String Waktu, String Status){
+    public void simpanjawab(String idJawab, String idTanya, String idPenjawab , String Jawaban, String Waktu, String Status){
         
         try {
             String sql = "insert into jawab(id_jawab, id_tanya, id_penjawab, jawaban, waktu, status) value (?,?,?,?,?,?)";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idJawab);
-            perintah.setInt(2, idTanya);
-            perintah.setInt(3, idPenjawab);
+            perintah.setString(1, idJawab);
+            perintah.setString(2, idTanya);
+            perintah.setString(3, idPenjawab);
             perintah.setString(4, Jawaban);
             perintah.setString(5, Waktu);
             perintah.setString(6, Status);
@@ -202,17 +202,17 @@ public class koneksi {
         }
     }
     //untuk tabel jawab
-    public void ubahjawab(int idJawab, int idTanya, int idPenjawab , String Jawaban, String Waktu, String Status){
+    public void ubahjawab(String idJawab, String idTanya, String idPenjawab , String Jawaban, String Waktu, String Status){
         
         try {
             String sql = "update jawab set id_tanya = ?, id_penjawab = ?, jawaban = ?, waktu = ?, status = ? where id_jawab = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idTanya);
-            perintah.setInt(2, idPenjawab);
+            perintah.setString(1, idTanya);
+            perintah.setString(2, idPenjawab);
             perintah.setString(3, Jawaban);
             perintah.setString(4, Waktu);
             perintah.setString(5, Status);
-            perintah.setInt(6, idJawab);
+            perintah.setString(6, idJawab);
             perintah.executeUpdate();
             System.out.println("Data berhasil diubah");
             
@@ -221,12 +221,12 @@ public class koneksi {
         }
     }
     //untuk tabel jawab
-    public void hapusjawab(int idJawab){
+    public void hapusjawab(String idJawab){
         
         try {
             String sql = "delete from jawab where id_jawab = ?";
             PreparedStatement perintah = koneksidb.prepareStatement(sql);
-            perintah.setInt(1, idJawab);
+            perintah.setString(1, idJawab);
             perintah.executeUpdate();
             System.out.println("Data berhasil dihapus");
             
@@ -235,7 +235,7 @@ public class koneksi {
         }
     }
     
-    /**
+    
     public void simpanbelajar(String tempNpm, String tempNama, String tempTelpon){
         
         try {
@@ -281,6 +281,6 @@ public class koneksi {
             System.out.println(e.getMessage());
         }
     }
-    */
+    
     
 }

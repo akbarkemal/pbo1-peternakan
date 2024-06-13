@@ -6,6 +6,7 @@ package peternakan;
 import peternak.*;
 import java.util.Scanner;
 import crud.koneksi;
+import GUI.Mainframe;
 
 /**
  *
@@ -18,41 +19,43 @@ public class Peternakan {
      */
     public static void main(String[] args) {
         
+        new Mainframe().setVisible(true);
+        
 //        koneksi crud = new koneksi();
-//        crud.simpanjawab(1, 1, 1, "KArena ayam terjadinya persebaran virus", "5 juni 2024", "pengamat");
+//        crud.simpanjawab("1", "1", "1", "KArena ayam terjadinya persebaran virus", "5 juni 2024", "pengamat");
 //      
 //        koneksi crud = new koneksi();
-//        crud.ubahjawab(1, 2, 5, "Karena terjadi nya musim kemarau panjang", "1 juni 2022", "ahli");
+//        crud.ubahjawab("1", "2", "5", "Karena terjadi nya musim kemarau panjang", "1 juni 2022", "ahli");
 //
 //        koneksi crud = new koneksi();
-//        crud.hapusjawab(1);
+//        crud.hapusjawab("1");
         
 //        koneksi crud = new koneksi();
-//        crud.simpanpenyuluh(0, "akbar", "alalak", "akbar@example", "akbar234");
+//        crud.simpanpenyuluh("0", "akbar", "alalak", "akbar@example", "akbar234");
 
 //        koneksi crud = new koneksi();
-//        crud.ubahpenyuluh(0, "mahendra", "tanjung", "mhndraa@example", "mhndra123");  
+//        crud.ubahpenyuluh("0", "mahendra", "tanjung", "mhndraa@example", "mhndra123");  
  
 //        koneksi crud = new koneksi();
-//        crud.hapuspenyuluh(0);
+//        crud.hapuspenyuluh("0");
 
 //        koneksi crud = new koneksi();
-//        crud.simpantanya(1, 1, "Kenapa ayam bisa terkena flu", "hewan unggas", "22 septempember 2022", "sakit");
+//        crud.simpantanya("1", "1", "Kenapa ayam bisa terkena flu", "hewan unggas", "22 septempember 2022", "sakit");
         
 //        koneksi crud = new koneksi();
-//        crud.ubahtanya(1, 2, "Kenapa ayam mati massal", "unggas", "22 oktober 2022", "mati");
+//        crud.ubahtanya("1", "2", "Kenapa ayam mati massal", "unggas", "22 oktober 2022", "mati");
 
 //        koneksi crud = new koneksi();
-//        crud.hapustanya(1);
+//        crud.hapustanya("1");
         /**
         koneksi crud = new koneksi();
-        crud.simpanpeternak(0, "akbar", "alalak", "akbar@example", "akbar234");
+        crud.simpanpeternak("1", "akbar", "alalak", "akbar@example", "akbar234");
         
         koneksi crud = new koneksi();
-        crud.ubahpeternak(0, "mahendra", "tanjung", "mhndraa@example", "mhndra123");
+        crud.ubahpeternak("1", "mahendra", "tanjung", "mhndraa@example", "mhndra123");
      
         koneksi crud = new koneksi();
-        crud.hapuspeternak(0);
+        crud.hapuspeternak("1");
         */
         
       /**  tanya saya = new tanya();
