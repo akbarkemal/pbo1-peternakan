@@ -7,6 +7,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+/*
+
+DriverManager digunakan untuk mendapatkan objek Connection ke database, biasanya melalui metode getConnection(url, user, password).
+PreparedStatement adalah sub-antarmuka dari Statement yang digunakan untuk menjalankan pernyataan SQL yang telah dikompilasi sebelumnya. 
+
+*/
+
 /**
  *
  * @author acer

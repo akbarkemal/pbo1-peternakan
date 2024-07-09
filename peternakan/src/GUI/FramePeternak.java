@@ -8,6 +8,15 @@ import javax.swing.JOptionPane;
 import java.sql.Statement;            
 import java.sql.ResultSet;
 
+/*
+
+import crud.koneksi;
+import javax.swing.JOptionPane; membuat dialog sederhana, seperti pesan informasi, pesan kesalahan, atau dialog konfirmasi. Contohnya, JOptionPane.showMessageDialog(null, "Pesan"); 
+import java.sql.Statement; menjalankan pernyataan SQL statis dan mengembalikan hasilnya. Misalnya, Anda bisa menggunakan Statement untuk menjalankan query SQL seperti SELECT, INSERT, UPDATE, atau DELETE.           
+import java.sql.ResultSet; menyimpan hasil dari query SQL yang dijalankan menggunakan objek Statement. ResultSet memungkinkan Anda untuk membaca data dari database satu baris pada satu waktu.
+
+*/
+
 /**
  *
  * @author acer
